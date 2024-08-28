@@ -1,7 +1,7 @@
-Given an Integer array nums, return the maximum difference between two successive elements in its sorted form. If the array contains less than two elements, return zero. 
+/* Given an Integer array nums, return the maximum difference between two successive elements in its sorted form. If the array contains less than two elements, return zero. 
 Nums:[3,6,9,1] 
 Output :3 
-
+*/
 
 import java.util.*;
 
