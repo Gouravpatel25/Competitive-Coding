@@ -15,6 +15,9 @@ Output 2: b1c1d1
 
 */
 
+//METHOD 1
+// Time Complexity : O(nlogn)
+//Space Complexity:  O(n)
 
 import java.util.*;
 
@@ -48,3 +51,48 @@ public class A{
         System.out.println(frequencyCount(s));
     }
 }
+
+
+//METHOD 2 using HashMap
+//Time Complexity & Space Complexity =O(n)
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class A {
+    public static String frequencyCount(String str) {
+        // Create a HashMap to store the frequency of each character
+        HashMap<Character, Integer> frequencyMap = new HashMap<>();
+        
+        // Count frequency of each character in the string
+        for (char ch : str.toCharArray()) {
+            frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+        }
+        
+        // Use StringBuilder to build the output string
+        StringBuilder sb = new StringBuilder();
+        
+        // Loop through characters from 'a' to 'z' to ensure alphabetical order
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            if (frequencyMap.containsKey(ch)) {
+                sb.append(ch).append(frequencyMap.get(ch));
+            }
+        }
+        
+        return sb.toString();
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter the string: ");
+        String s = sc.nextLine();
+        
+        // Print the result of frequency count
+        System.out.println(frequencyCount(s));
+        
+        sc.close();
+    }
+}
+
