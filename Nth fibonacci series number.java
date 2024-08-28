@@ -1,10 +1,11 @@
-Given n as input, Find the nth fibonacci series number.
+/* Given n as input, Find the nth fibonacci series number.
 Input 1: 1
 Output: 1
 
 Input 2: 9
 Output: 34
 Example od fibonacci series : 0,1,1,2,3,5,8,13,21,34,55.............
+*/
 
 import java.util.*;
 
